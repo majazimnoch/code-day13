@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Pontano+Sans:wght@300;400&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -7,8 +9,9 @@
 .navbar {
     display: flex;
     flex-direction: column;
-    background-color: #cfd6de;
+    background-color: #fbfbfb;
     padding: 30px;
+    box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.6);
 }
 
 .navbar-up {
@@ -20,6 +23,13 @@
 img {
     width: 80px;
 }
+
+.wrapper {
+background-color: rgb(245, 243, 240);
+padding-bottom: 8rem;
+min-height: 80vh;
+}
+
 .artwork-container {
     max-width: 400px; /* Adjust this value based on your layout */
     margin: auto; /* Center the container */
@@ -28,20 +38,55 @@ img {
 .artwork-image {
     width: 100%;
     height: auto;
-    min-height: 200px; /* Adjust this value as needed */
+    min-height: 200px;
+    padding: 10px;
 }
 
 .button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+    outline: 0;
     cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+    background: #FFF;
+    border: 1px solid #D5D9D9;
+    font-size: 13px;
+    height: 31px;
+    padding: 0 11px;
+    text-align: center;
+    font-weight: 800;
+    color: #0F1111;  
+    font-family: 'Pontano Sans', sans-serif;  
 }
 
 /* Style for the button hover effect */
-.button:hover {
-    background-color: #0056b3;
+.button:hover  {
+    background-color: #F7FAFA;
+    border-color: #D5D9D9;
+}
+
+h2 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 30px;
+}
+
+p {
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: 14px;
+}
+
+a {
+    color: #bd9090;
+}
+
+a:hover {
+    color: #744949;
+}
+
+a:focus {
+    color:#995959;
+}
+
+a:visited {
+    color:#000000;
 }
