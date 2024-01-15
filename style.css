@@ -1,0 +1,25 @@
+.artwork-container {
+    max-width: 400px; /* Adjust this value based on your layout */
+    margin: auto; /* Center the container */
+}
+
+.artwork-image {
+    width: 100%;
+    height: auto;
+    min-height: 200px; /* Adjust this value as needed */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style for the button hover effect */
+.button:hover {
+    background-color: #0056b3;
+}
