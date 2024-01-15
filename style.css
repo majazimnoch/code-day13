@@ -20,26 +20,44 @@
     justify-content: space-between;
 }
 
+.navbar-bottom p {
+    margin: 15px 0;
+    font-size: 13px;
+}
+
+hr {
+    margin: 20px 0;
+    opacity: 0.4;
+}
+
 img {
     width: 80px;
+    opacity: 1;
+    transition: .5s ease;
+}
+
+img:hover {
+    opacity: .7;
+    transition: .5s ease;
 }
 
 .wrapper {
-background-color: rgb(245, 243, 240);
-padding-bottom: 8rem;
-min-height: 80vh;
+    background-color: rgb(245, 243, 240);
+    padding-bottom: 8rem;
+    min-height: 80vh;
 }
 
 .artwork-container {
-    max-width: 400px; /* Adjust this value based on your layout */
-    margin: auto; /* Center the container */
+    max-width: 400px; 
+    margin: auto; 
+    padding: 10px;
 }
 
 .artwork-image {
     width: 100%;
     height: auto;
     min-height: 200px;
-    padding: 10px;
+    margin: 10px 0;
 }
 
 .button {
@@ -68,6 +86,10 @@ min-height: 80vh;
 h2 {
     font-family: 'Abril Fatface', serif;
     font-size: 30px;
+}
+
+h3 {
+    padding: 10px 0;
 }
 
 p {

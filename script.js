@@ -53,6 +53,7 @@ const displayArtworkDetails = (artwork) => {
                     <img src="${imageUrl}" alt="${title}" class="artwork-image">
                     <p>${description}</p>
                 </div>
+
             `;
         })
         .catch((error) => {
