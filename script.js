@@ -21,41 +21,42 @@ const getRandomArtwork = () => {
 
             // Display information about the random artwork
             if (randomArtwork) {
-                const title = randomArtwork.title;
-                const artistDisplay = randomArtwork.artist_display;
-                const imageId = randomArtwork.image_id;
-
-                // Constructing the Image API URL
-                const iiifUrl = "https://www.artic.edu/iiif/2";
-                const imageUrl = `${iiifUrl}/${imageId}/full/400,/0/default.jpg`;
-
-                artworkDetails(randomArtwork.id)
-                    .then((details) => {
-                        const description = details.data.description || "We have no description for this artwork, yet!"
-
-                        // Info about a random artwork
-                        art.innerHTML = `
-                            <button id="reload" class="button" onclick="getRandomArtwork()">Click here to get a new artwork</button>
-                            <div class="artwork-container">
-                                <h2>${title}</h2>
-                                <h3>${artistDisplay}</h3>
-                                <img src="${imageUrl}" alt="${title}" class="artwork-image">
-                                <p>${description}</p>
-                            </div>
-                        `;
-
-                    })
-                    .catch((error) => {
-                        console.error('Error fetching artwork details:', error)
-                    });
-
+                displayArtworkDetails(randomArtwork);
             } else {
-                art.innerHTML += `<p>No artworks available.</p>`;
+                art.innerHTML = `<p>No artworks available.</p>`;
             }
         })
         .catch((error) => {
-            console.error("Error fetching data");
+            console.error("Error fetching data", error);
             art.innerHTML = `<p>Error fetching data.</p>`;
+        });
+}
+
+const displayArtworkDetails = (artwork) => {
+    const title = artwork.title;
+    const artistDisplay = artwork.artist_display;
+    const imageId = artwork.image_id;
+
+    // Constructing the Image API URL
+    const iiifUrl = "https://www.artic.edu/iiif/2";
+    const imageUrl = `${iiifUrl}/${imageId}/full/400,/0/default.jpg`;
+
+    artworkDetails(artwork.id)
+        .then((details) => {
+            const description = details.data.description || "We have no description for this artwork, yet!"
+
+            // Info about the artwork
+            art.innerHTML = `
+                <div class="artwork-container">
+                    <h2>${title}</h2>
+                    <h3>${artistDisplay}</h3>
+                    <img src="${imageUrl}" alt="${title}" class="artwork-image">
+                    <p>${description}</p>
+                </div>
+            `;
+        })
+        .catch((error) => {
+            console.error('Error fetching artwork details:', error);
         });
 }
 
