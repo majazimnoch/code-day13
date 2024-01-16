@@ -6,24 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ART API</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/lottie-web@5.7.2"></script>
 </head>
 <body>
     <div class="navbar">
         <div class="navbar-up">
-            <img src="/assets/logo.png">
+            <a href="https://fastidious-babka-6479df.netlify.app/">
+                <img src="/assets/logo.png" alt="logo of AIC">
+            </a>
             <p><button id="reload" class="button" onclick="getRandomArtwork()">Click here to get a new artwork</button></p>
         </div>
         <div class="navbar-bottom">
             <hr>
-            <p>The Art Institute of Chicago's API provides JSON-formatted data as a REST-style service that allows developers to explore and integrate the museum’s public data into their projects. Here is my example of how you can use it.</p>
+            <p>The Art Institute of Chicago's API provides JSON-formatted data as a REST-style service that allows developers to explore and integrate the museum’s public data into their projects. Here is my example of how you can use it. A random artwork from AIC will be generated everytime you reload the page or click the button above.</p>
         </div>
-       
-
     </div>
     <div class="wrapper">
         <div id="art"></div>
     </div>
-    
+    <div class="footer">
+        <h2>A true artist is not one who is inspired but one who inspires others.</h2> 
+        <h3>Salvador Dalí</h3>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

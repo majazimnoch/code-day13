@@ -15,11 +15,11 @@ const getRandomArtwork = () => {
         .then((json) => {
             const artworks = json.data;
 
-            // Get a random index to select a random artwork
+            // Getting a random index to select a random artwork
             const randomIndex = Math.floor(Math.random() * artworks.length);
             const randomArtwork = artworks[randomIndex];
 
-            // Display information about the random artwork
+            // Displaying information about the random artwork
             if (randomArtwork) {
                 displayArtworkDetails(randomArtwork);
             } else {
@@ -48,12 +48,16 @@ const displayArtworkDetails = (artwork) => {
             // Info about the artwork
             art.innerHTML = `
                 <div class="artwork-container">
-                    <h2>${title}</h2>
-                    <h3>${artistDisplay}</h3>
-                    <img src="${imageUrl}" alt="${title}" class="artwork-image">
-                    <p>${description}</p>
+                    <div class="image-wrapper">
+                        <img src="${imageUrl}" alt="${title}" class="artwork-image-desktop">
+                    </div>
+                    <div class="artwork-container-wrapper">
+                        <h2>${title}</h2>
+                        <h3>${artistDisplay}</h3>
+                        <img src="${imageUrl}" alt="${title}" class="artwork-image">
+                        <p>${description}</p>
+                    </div>
                 </div>
-
             `;
         })
         .catch((error) => {
